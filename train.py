@@ -5,13 +5,14 @@ import glob
 import sys
 
 
-TESSERACT_DIR='/storage/projects/alpr/libraries/tesseract-ocr'
+TESSERACT_DIR='/usr/bin'
 
-os.environ["TESSDATA_PREFIX"] = TESSERACT_DIR
+os.environ["TESSDATA_PREFIX"] = '/usr/share/tesseract-ocr'
 #os.system("export TESSDATA_PREFIX=" + TESSERACT_DIR)
 
 TESSERACT_BIN=TESSERACT_DIR + '/tesseract'
-TESSERACT_TRAINDIR= TESSERACT_DIR + '/training'
+# TESSERACT_TRAINDIR= TESSERACT_DIR + '/training'
+TESSERACT_TRAINDIR='/root/tesseract-3.04.01/training'
 
 
 country = raw_input("Two-Letter Country Code to Train: ").lower()
